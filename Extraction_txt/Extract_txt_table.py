@@ -4,10 +4,10 @@ import pandas as pd
 from PIL import Image
 
 # Chemin vers le fichier Tesseract (à adapter selon votre installation)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\ekalboussi\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = yout path vers le fichier "tesseract.exe"
 
 # Charger l'image
-image_path = r'C:\Users\ekalboussi\OneDrive - ALTEN Group\Bureau\Project_NLP\OCR-and-Classifier-Doc\extraction\Table\test\img_6.png'
+image_path = '\img_6.png'
 image = Image.open(image_path)
 
 # Extraire le texte avec les informations de position
@@ -41,7 +41,7 @@ if current_row:
 df = pd.DataFrame(rows)
 
 # Exporter le DataFrame en fichier Excel
-output_excel_path = r'C:\Users\ekalboussi\OneDrive - ALTEN Group\Bureau\Project_NLP\OCR-and-Classifier-Doc\extraction\Table\Resultas\output_table6.xlsx'
+output_excel_path = '\output_table6.xlsx'
 df.to_excel(output_excel_path, index=False, header=False)
 
 print(f'Tableau extrait et enregistré dans : {output_excel_path}')
